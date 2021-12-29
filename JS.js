@@ -1,3 +1,4 @@
+// <<<<<<< HEAD
 // var post = {
 
 //     Post1: ["Comment1 ", "Comment1 ", "Comment1 "],
@@ -53,7 +54,7 @@ function postsData() {
             // console.log("Comments" , comments)
 
             var merged = comments.map(comment => {
-                var postsItem = posts.find(i => i.id === comment.id)
+                var postsItem = posts.find(i => i.id === comment.id && i.userId === comment.postId )
 
                 return{comment , ...postsItem}
             })
